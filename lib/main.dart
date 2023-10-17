@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart  ';
+import 'package:flutter/material.dart';
 import 'package:todo_rest/screens/todo_list.dart';
 
 void main() {

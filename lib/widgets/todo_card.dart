@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart%20%20';
+import 'package:flutter/material.dart';
 
 class TodoCard extends StatelessWidget {
   final int index;
