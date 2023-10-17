@@ -39,13 +39,16 @@ class TodoService {
   }
 
   static Future<bool> addTodo(Map body) async {
-    const url = "https://api.nstack.in/v1/todos";
+    const url = 'https://api.nstack.in/v1/todos';
     final uri = Uri.parse(url);
-    final response = await http.put(
+    final response = await http.post(
       uri,
       body: jsonEncode(body),
       headers: {'Content-Type': 'application/json'},
     );
+    if (response.statusCode != 201) {
+      print(response.body);
+    }
 
     return response.statusCode == 201;
   }
